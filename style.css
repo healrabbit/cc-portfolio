@@ -1,0 +1,46 @@
+h1{
+  font-family:Helvetica,sans-serif;
+}
+h3{
+ 
+  font-family:Helvetica,sans-serif;
+  
+      }
+.num-flex{
+  display:flex;
+  flex-direction: row;
+  justify-content:center; 
+  margin-bottom:45px;
+}
+.flex-container{
+  display:flex;
+  flex-direction: row;
+}
+
+.flex-child{
+  flex:1;
+}
+#canvas{
+  margin-left:40px;
+}
+#right{
+  display:flex;
+  flex-direction: column;
+}
+#titlee{
+  margin-left:150px;
+}
+ #caption{
+  width:400px;
+  justify-content: left;
+ }
+
+ #button{
+  transition-property:transform;
+  transition-duration:0.3s;
+
+}
+#button:hover {   
+transform: scale(1.2);
+
+} 
