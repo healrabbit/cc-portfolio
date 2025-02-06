@@ -12,9 +12,7 @@ h3{
   justify-content:center; 
   margin-bottom:45px;
 }
-.head-grids{
 
-}
 .num-grids{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
