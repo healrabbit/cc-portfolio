@@ -6,12 +6,7 @@ h3{
   font-family:Helvetica,sans-serif;
   
       }
-.num-flex{
-  display:flex;
-  flex-direction: row;
-  justify-content:center; 
-  margin-bottom:45px;
-}
+
 
 .num-grids{
   display:grid;
@@ -34,14 +29,7 @@ display:grid;
 grid-template-rows:1fr 3fr;
 grid-template-columns:1fr 1fr;
 }
-.flex-container{
-  display:flex;
-  flex-direction: row;
-}
 
-.flex-child{
-  flex:1;
-}
 .grid-about{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -54,6 +42,23 @@ grid-template-columns:1fr 1fr;
   display:grid;
   grid-template-rows:1fr 8fr 1fr 3fr;
 }
+
+.flex-container{
+  display:flex;
+  flex-direction: row;
+}
+
+.num-flex{
+  display:flex;
+  flex-direction: row;
+  justify-content:center; 
+  margin-bottom:45px;
+}
+
+.flex-child{
+  flex:1;
+}
+
 #canvas{
   margin-left:40px;
 }
