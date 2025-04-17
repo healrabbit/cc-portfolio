@@ -1,0 +1,160 @@
+<html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <title>project 3</title>
+          <link rel="icon" href="233.png" type="image/gif" sizes="30x30">
+          <style>
+            body {
+      background-image: url("grassbg.jpg");
+      background-size: cover;
+
+    }
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    h4{
+      color: white;
+    }
+
+button{
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+ font-family:Helvetica,sans-serif;
+ color:white;
+ margin:10px;
+ 
+
+}
+.sunlight{
+background-color:pink;
+}
+.sunlight.selected{
+        background-color: lightblue; /* Selected color */
+}
+.dog{
+background-color:pink;
+}
+.dog.selected{
+        background-color: lightblue; /* Selected color */
+}
+.party{
+background-color:pink;
+}
+.party.selected{
+        background-color: lightblue; /* Selected color */
+}
+.plants{
+background-color:pink;
+}
+.plants.selected{
+        background-color: lightblue; /* Selected color */
+}
+.pollution{
+background-color:pink;
+}
+.pollution.selected{
+        background-color: lightblue; /* Selected color */
+}
+.mosquito{
+background-color:pink;
+}
+.mosquito.selected{
+        background-color: lightblue; /* Selected color */
+}
+.rat{
+background-color:pink;
+}
+.rat.selected{
+        background-color: lightblue; /* Selected color */
+}
+       </style>
+          <link rel="stylesheet" href="style.css">
+      
+        </head>
+        <body>
+        
+          <center>  
+          <p>&nbsp;</p>
+            <h2> Project 3: Community Quiz</h2>
+                <h4>  <img src="quiztitle.png" width="600px"> </h4>
+                <p>&nbsp;</p>
+           
+<h2> How much sun does your backyard get? </h2>
+&nbsp;
+  <center> <button class= "sunlight" value="partial"  onclick="toggleButton(this)" > Partial </button> <br>
+<button class= "sunlight" value="full"  onclick="toggleButton(this)"> Full </button> <br>
+<button class= "sunlight" value="little"  onclick="toggleButton(this)"> Little </button> </center>  <br>
+&nbsp;
+&nbsp;
+
+<h2> Do you have a dog? </h2>
+&nbsp;
+   <center> <button class= "dog" value="hasdog"  onclick="toggleButton(this)" > Yes </button> <br>
+<button class= "dog" value="nodog"  onclick="toggleButton(this)"> No </button> </center> <br>
+
+&nbsp;
+&nbsp;
+<h2> Do you like to entertain? </h2>
+&nbsp;
+<center>  <button class= "party" value="entertain"  onclick="toggleButton(this)" > Yes </button> <br>
+<button class= "party" value="noparty"  onclick="toggleButton(this)"> No </button> </center> <br>
+
+&nbsp;
+&nbsp;
+<h2> What type of plant would you like to grow? 
+     </h2>
+&nbsp;
+<center>  <button class= "plants" value="flowering"  onclick="toggleButton(this)" > Flowering </button> <br>
+<button class= "plants" value="bushes"  onclick="toggleButton(this)"> Bushes </button> <br>
+<button class= "plants" value="edible"  onclick="toggleButton(this)"> Edible </button> <br>
+<button class= "plants" value="noplants"  onclick="toggleButton(this)"> Not Interested</button> </center> <br>
+&nbsp;
+&nbsp;
+<h2> Have you done a soil test? </h2>
+&nbsp;
+<center>  <button class= "pollution" value="pol"  onclick="toggleButton(this)" > Yes - Polluted </button> <br>
+<button class= "pollution" value="nopol"  onclick="toggleButton(this)"> Yes - Not Polluted </button> <br>
+<button class= "pollution" value="notest"  onclick="toggleButton(this)"> No </button> </center> <br>
+&nbsp;
+&nbsp;
+<h2> Do you have a mosquito problem? </h2>
+&nbsp;
+<center>   <button class= "mosquito" value="hasmosq"  onclick="toggleButton(this)" > Yes </button> <br>
+<button class= "mosquito" value="nomosq"  onclick="toggleButton(this)"> No </button> </center> <br>
+
+&nbsp;
+&nbsp;
+&nbsp;
+<h2> Do you have a rat problem? </h2>
+&nbsp;
+<center> <button class= "rat" value="hasrat"  onclick="toggleButton(this)" > Yes </button> <br>
+<button class= "rat" value="norat"  onclick="toggleButton(this)"> No </button> </center> <br>
+
+&nbsp;
+&nbsp;
+<p> &nbsp;</p>
+<div> <a href="gardenquizresults.html"><img src="results.png" width="300px" id="button"></a></div>
+<p> &nbsp;</p>
+<script src="quiz.js"> </script>
+<script>
+    function toggleButton(button) {
+     //
+     if(String(this) !== localStorage.getItem("sunlight")){
+        this.classList.toggle("selected",false);  
+    }
+    }
+
+    
+    </script>
+    
+                <div> <center> <a href="index.html"> <img src="home.png" width="130px" id="button"> </a> </center> </div>
+
+                </body>
+                </html>
+                    
+                    
