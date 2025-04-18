@@ -127,6 +127,20 @@ if(localStorage.getItem("plants") === "edible"){
                 }
             }
             }
+           if(localStorage.getItem("plants") === "noplants"){
+            fsbush.style.display = 'none';
+            psbush.style.display = 'none';
+            sbush.style.display = 'none';
+            fsherb.style.display = 'none';
+            psherb.style.display = 'none';
+            sherb.style.display = 'none';
+            fsflower.style.display = 'none';
+            psflower.style.display = 'none';
+            sflower.style.display = 'none';
+            soiltest.style.display = 'none';
+            polluted.style.display = 'none';
+                }
+            
         if(localStorage.getItem("dog") === "nodog" && localStorage.getItem("plants") === "noplants"
          && localStorage.getItem("entertain") === "noparty"){
             non.style.display = 'block';
