@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 let sun = document.querySelectorAll('.sunlight');
 for (let i = sun.length-1; i>=0;i--){
-sun[i].addEventListener("click", () => function(){ 
+sun[i].addEventListener("click", function(){ 
     item1 = true;
     console.log(item1);
 let sunval = this.value;
