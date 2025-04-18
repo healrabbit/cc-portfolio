@@ -1,21 +1,33 @@
+
 document.addEventListener("DOMContentLoaded",function(){
+  
+ var item1;
+  var item2 ;
+ var item3 ;
+ var item4 ;
+ var item5 ;
+  var item6 ;
+    var item7 ;    
 
 
 let sun = document.querySelectorAll('.sunlight');
-for (var i = sun.length-1; i>=0;i--){
-sun[i].addEventListener("click",function (){ 
+for (let i = sun.length-1; i>=0;i--){
+sun[i].addEventListener("click", () => function(){ 
+    item1 = true;
+    console.log(item1);
 let sunval = this.value;
 localStorage.setItem("sunlight", sunval);
 sun.forEach(element => {
 element.classList.toggle("selected",false);
   });
 this.classList.toggle("selected",true);
+
 }); 
 
 }
 
 let dog = document.querySelectorAll('.dog');
-for (var i = dog.length-1; i>=0;i--){
+for (let i = dog.length-1; i>=0;i--){
 dog[i].addEventListener("click",function (){ 
 
 let dogval = this.value;
@@ -24,6 +36,7 @@ dog.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+   item2 = true;
     });
 }
 
@@ -37,6 +50,7 @@ entertain.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+    item3 = true;
     });
 }
 
@@ -50,6 +64,7 @@ plants.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+   item4 = true;
     });
 }
 
@@ -63,6 +78,7 @@ pollution.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+    item5 = true;
     });
 }
 
@@ -76,6 +92,7 @@ mosquito.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+    item6 = true;
     });
 }
 let rat = document.querySelectorAll('.rat');
@@ -88,9 +105,14 @@ rat.forEach(element => {
     element.classList.toggle("selected",false);
       });
     this.classList.toggle("selected",true);
+     item7 = true;
     });
 }
-
-
+let result = document.getElementById('result');
+if(item1===true && item2 ===true && item3===true 
+&& item4 === true && item5 === true && item6===true && item7 === true){
+result.style.display ="block";
+console.log("results please!");
+}
+console.log(item1);
 });
-

@@ -26,7 +26,15 @@
     grid-template-rows: 1fr,1fr,1fr,0.4fr;
    
 }
-  
+.responsive{
+min-width:280px;
+max-width:800px;
+}  
+@media (max-width:700px){
+.responsive{
+    width:500px;
+}
+}
        </style>
           <link rel="stylesheet" href="style.css">
         </head>
@@ -35,7 +43,7 @@
           <center>  
           <p>&nbsp;</p>
             <h2> Project 3: Community Quiz</h2>
-                <h4>  <img src="quiztitle.png" width="600px"> </h4>
+            <div class="responsive">   <h4>  <img src="quiztitle.png" width="100%" > </h4> </div>
                 <p>&nbsp;</p>
                
          

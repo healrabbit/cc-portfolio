@@ -22,46 +22,20 @@ let non = document.getElementById('non');
 //DOGS
 if (localStorage.getItem("dog") === "hasdog"){
    dogpark.style.display = 'block';
-   fsbush.style.display = 'none';
-   psbush.style.display = 'none';
-   sbush.style.display = 'none';
-   fsherb.style.display = 'none';
-   psherb.style.display = 'none';
-   sherb.style.display = 'none';
-   fsflower.style.display = 'none';
-   psflower.style.display = 'none';
-   sflower.style.display = 'none';
-   soiltest.style.display = 'none';
-   polluted.style.display = 'none';
-   party.style.display = 'none';
-   non.style.display = 'none';
 }
 else if (localStorage.getItem("dog") === "nodog"){
     dogpark.style.display = 'none';
-
+}
 //ENTERTAINING SPACE 
 if (localStorage.getItem("entertain") === "entertain"){
-    fsbush.style.display = 'none';
-    psbush.style.display = 'none';
-    sbush.style.display = 'none';
-    fsherb.style.display = 'none';
-    psherb.style.display = 'none';
-    sherb.style.display = 'none';   
-     fsflower.style.display = 'none';
-    psflower.style.display = 'none';
-    sflower.style.display = 'none';
-   dogpark.style.display = 'none';
    party.style.display = 'block';
-   soiltest.style.display = 'none';
-   polluted.style.display = 'none';
-   non.style.display = 'none';
-
+   
 }
 else if (localStorage.getItem("entertain") === "noparty"){
     party.style.display = 'none';
+}
 ///PLANTS 
 if(localStorage.getItem("plants") !== "noplants"){
-    non.style.display = 'none';
     //POLLUTION
     if(localStorage.getItem("pollution") === "pol"){
         soiltest.style.display = 'none';
@@ -153,9 +127,6 @@ if(localStorage.getItem("plants") === "edible"){
                 }
             }
             }
-      
-        }
-        }
         if(localStorage.getItem("dog") === "nodog" && localStorage.getItem("plants") === "noplants"
          && localStorage.getItem("entertain") === "noparty"){
             non.style.display = 'block';
@@ -172,6 +143,8 @@ if(localStorage.getItem("plants") === "edible"){
             soiltest.style.display = 'none';
             polluted.style.display = 'none';
             party.style.display = 'none';
+        } else {
+            non.style.display = 'none';
         }
 
 
@@ -200,4 +173,7 @@ localStorage.clear();
  });
 });
 
-console.log(localStorage.getItem("dog") )
+console.log(localStorage.getItem("sunlight") );
+console.log(localStorage.getItem("dog") );
+console.log(localStorage.getItem("pollution") );
+console.log(localStorage.getItem("mosquito") );
