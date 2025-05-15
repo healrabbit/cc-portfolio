@@ -1,0 +1,133 @@
+<html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>project 4</title>
+          <link rel="icon" href="244.png" type="image/gif" sizes="30x30">
+          <style>
+            body {
+      background-image: url("homebg.png");
+      background-size: cover;
+    }
+    h1{
+      color: white;
+      font-family:Helvetica,sans-serif;
+    }
+    h2{
+      color: white;
+      font-family:Helvetica,sans-serif;
+    }
+
+    h3{
+      color: white;
+      font-family:Helvetica,sans-serif;
+    }
+    h4{
+      color: white;
+      font-family:Helvetica,sans-serif;
+    }
+    p{
+      color: white;
+      font-family:Helvetica,sans-serif;
+      text-shadow:3px 3px 20px black;
+    }
+.proj-grid{
+    display:grid;
+    grid-template-rows: 1fr,1fr,1fr,0.4fr;
+   
+}
+.paws{
+width:100px;
+height:100px;
+margin:10px;
+
+
+}
+
+.paws.notselected{
+    display:none;
+}
+
+.offerings{
+width:100px;
+height:100px;
+margin:10px;
+
+
+}
+
+.offerings.notselected{
+    display:none;
+}
+#resultbutton{
+display:none;
+}
+#refreshbutton{
+    display:none;
+}
+
+
+#fortune{
+    width: 400px;
+    height: 400px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:grid;
+    place-items: center;
+    display:none;
+}
+
+#matched{
+    display:none;
+  
+}
+#accepted{
+    display:none;
+
+}
+.responsive{
+min-width:280px;
+max-width:800px;
+}  
+@media (max-width:400px){
+.responsive{
+    width:350px;
+}
+#fortune{
+    width: 350px;
+    height: 350px;
+   
+}
+}
+       </style>
+          <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <script src="oracle.js"></script>
+          <center>  
+          <p>&nbsp;</p>
+            <h2> Project 4: Digital Divination</h2>
+           
+         <h2> Message From A Seer</h2>
+            &nbsp;
+        <center> <div id="options"> <h4> CHOOSE ONE TO GET MATCHED WITH A SEER </h4>
+<div> <h1 class="paws">1</h1>  <h1 class="paws">2</h1>  <h1 class="paws">3</h1>  <h1 class="paws">4</h1>  </div>
+<p id="matched"> NOW MATCHED WITH SEER </p>
+
+<h4> MAKE AN OFFERING TO YOUR SEER</h4>
+<div> <h1 class="offerings">1</h1>  <h1 class="offerings">2</h1>  <h1 class="offerings">3</h1>  <h1 class="offerings">4</h1>  </div>
+<p id="accepted"> SEER HAS ACCEPTED YOUR OFFERING </p>
+          </div>
+        </center> 
+
+         <center>  <button id="resultbutton" onClick="showDiv()"> Get Fortune </button> </center> 
+<div class="results" id="fortune"> </div>
+<center>  <button id="refreshbutton" onClick="window.location.reload()"> Try Again </button> </center>
+<p>&nbsp;</p>
+<div> <center> <a href="index.html"> <img src="home.png" width="130px" id="button"> </a> </center> </div>
+        </body>
+        </html>
+                </body>
+                </html>
+                    
+                    
