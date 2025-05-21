@@ -15,10 +15,19 @@ function preload() {
 }
 
 function setup() {
+  if(windowWidth>400){
   c = createCanvas(640, 480);
-  c.parent('canvas')
+   c.parent('canvas')
     video = createCapture(VIDEO);
   video.size(640, 480);
+  }
+else{
+    c = createCanvas(320, 240);
+     c.parent('canvas')
+    video = createCapture(VIDEO);
+  video.size(320, 420);
+}
+ 
   video.hide();
   handPose.detectStart(video, gotHands);
 }
@@ -66,14 +75,26 @@ let handedness = hand.handedness;
      
   //sandwich placement for left hand 
       if(handedness == "Left"){
+         if(windowWidth>400){
            image(sandwichtop,knuckle4.x-15,knuckle2.y-((knuckle1.x-knuckle4.x)/2),(knuckle1.x-knuckle4.x)+((knuckle1.x-knuckle4.x)/2),(knuckle1.x-knuckle4.x)/1.2)
                image(sandwichbottom,knuckle4.x-15,tip2.y-((knuckle1.x-knuckle4.x)/3),(knuckle1.x-knuckle4.x)+((knuckle1.x-knuckle4.x)/2),(knuckle1.x-knuckle4.x)/1.2)
       }
+      else{
+         image(sandwichtop,knuckle4.x-15,knuckle2.y-((knuckle1.x-knuckle4.x)/2)-width/4,(knuckle1.x-knuckle4.x)+((knuckle1.x-knuckle4.x)/2),(knuckle1.x-knuckle4.x)/1.2)
+               image(sandwichbottom,knuckle4.x-15,tip2.y-((knuckle1.x-knuckle4.x)/5)-width/3,(knuckle1.x-knuckle4.x)+((knuckle1.x-knuckle4.x)/2),(knuckle1.x-knuckle4.x)/1.2)
+      }
+    }
     //sandwich placement for right hand since the fingers are in reverse order 
           if(handedness == "Right"){
+             if(windowWidth>400){
             image(sandwichtop,knuckle1.x-15,knuckle2.y-((knuckle4.x-knuckle1.x)/2),(knuckle4.x-knuckle1.x)+((knuckle4.x-knuckle1.x)/2),(knuckle4.x-knuckle1.x)/1.2)
                image(sandwichbottom,knuckle1.x-15,tip2.y-((knuckle4.x-knuckle1.x)/3),(knuckle4.x-knuckle1.x)+((knuckle4.x-knuckle1.x)/2),(knuckle4.x-knuckle1.x)/1.2)
     }
+    else{
+ image(sandwichtop,knuckle1.x-15,knuckle2.y-((knuckle4.x-knuckle1.x)/2)-width/4,(knuckle4.x-knuckle1.x)+((knuckle4.x-knuckle1.x)/2),(knuckle4.x-knuckle1.x)/1.2)
+               image(sandwichbottom,knuckle1.x-15,tip2.y-((knuckle4.x-knuckle1.x)/3)-width/3,(knuckle4.x-knuckle1.x)+((knuckle4.x-knuckle1.x)/2),(knuckle4.x-knuckle1.x)/1.2)
+    }
+  }
        //capture instructions
       if(spacebar == false){
       push()
@@ -81,8 +102,13 @@ let handedness = hand.handedness;
   scale(-1, 1);
       fill('white');
       textFont(font);
+     if(windowWidth>400){
       textSize(50);
-      text('PRESS SPACE TO SNAP A PIC', width/7,400)
+      }
+      else{
+        textSize(25);
+      }
+      text('PRESS SPACE TO SNAP A PIC', width/7,height/1.1)
       pop()
       }
   }
@@ -96,8 +122,13 @@ let handedness = hand.handedness;
   scale(-1, 1);
       fill('white');
       textFont(font);
+      if(windowWidth>400){
       textSize(100);
-      text('MAKE A FIST!', width/6,100)
+      }
+      else{
+        textSize(46);
+      }
+      text('MAKE A FIST!', width/6,height/4)
     }
 }
 

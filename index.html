@@ -15,6 +15,7 @@
       overflow:hidden;
      
     }
+  
     #responsive{
 min-width:280px;
 max-width:1920px;
@@ -31,9 +32,21 @@ max-width:1920px;
     width:350px;
 }
 .num-grids{
-  display:grid;
-  max-width:100%;
-  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  display:flex;
+  flex-wrap: wrap;
+justify-content: center;
+  
+}
+#resize{
+  width:50%
+}
+.resize1{
+  width:60%
+}
+.foot-grids{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 }
 
@@ -47,26 +60,28 @@ max-width:1920px;
     <div id = "responsive" class="header">
 	<center><img src="ccport.png" width="100%" ></center>
   </div>
-  
+  <p> &nbsp;</p>
  
-<div id = "responsive" class="main" style="color:black">
+<div class="main" style="color:black">
   <div class="num-grids">
-  <div></div>
-   <div  id="button"><center> <a href="fall.html">  <img src="1.png" width="70%" onmouseover="this.src='11.png'"
+
+<div></div>
+
+   <div class="resize1" id="button"><center> <a href="fall.html">  <img src="1.png" width="70%" onmouseover="this.src='11.png'"
     onmouseout="this.src='1.png'"> </a> </center> </div> 
-  <div  id="button">   <center> <a href="spring.html">  <img src="222.png" width="70%" onmouseover="this.src='2222.png'"
+  <div  class = "resize1" id="button">   <center> <a href="spring.html">  <img src="222.png" width="70%" onmouseover="this.src='2222.png'"
     onmouseout="this.src='222.png'"> </a> </center></div> 
     <div></div>
 
 
  </div>
  
- <div class = "foot-grids"> 
-  <div class="birdsplit"> <div></div> <div></div><div></div><div><a href="fortunecookie.html"> <img id ="button" src="lightasafeather.png" width="280px"></a> </div> </div>
- <div class="spliit"> <div></div><div><center> <a href="about.html"> <img id="button" src="about.png" width="370px" onmouseover="this.src='aboutt.png'"
+ <div id = "responsive" class = "foot-grids"> 
+  <div id ="resize" class="birdsplit"> <div></div> <div></div><div></div><div><a href="fortunecookie.html"> <img <img  id ="button" src="lightasafeather.png" width="90%"></a> </div> </div>
+ <div  class="spliit"> <div></div><div> <center> <a href="about.html"> <img <img  id="button" src="about.png" width="60%" onmouseover="this.src='aboutt.png'"
   onmouseout="this.src='about.png'"></a> </center>
   </div> </div>
-<div  > <a href="https://healrabbit.com"> <img id="button" src="healrab.png" width=230px> </a></div>
+<div > <a href="https://healrabbit.com"> <img id="button" src="healrab.png" width=40%> </a>  </div>
 </div>
  </body>
 </html>
